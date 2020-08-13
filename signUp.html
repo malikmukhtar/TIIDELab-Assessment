@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>TIIDELAB Signup Form</title>
+</head>
+
+<body>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: "Open Sans";
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+        }
+
+        .container .full-screen {
+            width: 33%;
+            height: 100%;
+            background-image: url(images/man-standing-on-balcony.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.9;
+        }
+
+        .container .full-screen-2 {
+            width: 67%;
+            height: 100%;
+            background: #f5f6f9 0% 0% no-repeat padding-box;
+            opacity: 1;
+        }
+
+        .container .full-screen .speech .quotes {
+            background: #1461a2 0% 0% no-repeat padding-box;
+            border-radius: 15px 15px 0px 0px;
+            opacity: 1;
+            padding: 7px;
+            width: max-content;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            margin-top: -20px;
+            margin-left: -15px;
+        }
+
+        .speech {
+            position: relative;
+            width: 280px;
+            height: 100px;
+            background: #ffffff 0% 0% no-repeat padding-box;
+            border-radius: 0px 0px 90px 0px;
+            opacity: 1;
+            margin-top: 450px;
+            margin-left: 180px;
+            z-index: 1;
+            padding: 35px 20px 0px 20px;
+        }
+
+        .input-container {
+            display: flex;
+            margin-bottom: 5px;
+        }
+
+
+
+        .detail {
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+            height: 100px;
+        }
+
+        .form {
+            padding: 30px 50px 0px 100px;
+        }
+
+        .form h3 {
+            width: 574px;
+            height: 43px;
+            text-align: left;
+            font-family: "Open Sans";
+            font: Bold 32px/43px "Open Sans";
+            letter-spacing: 0px;
+            color: #043b5c;
+            text-transform: uppercase;
+            opacity: 1;
+        }
+
+        .form h5 {
+            text-align: left;
+            font: SemiBold 16px/22px "Open Sans";
+            letter-spacing: 0px;
+            color: #043b5c;
+            width: 220px;
+            height: 22px;
+        }
+
+        h6 {
+            width: 100px;
+            height: 20px;
+            text-align: left;
+            font: SemiBold 16px/22px "Open Sans";
+            letter-spacing: 0px;
+            color: #043b5c7f;
+            opacity: 1;
+        }
+
+        input {
+            width: 155px;
+            height: 35px;
+            background: #ffffff 0% 0% no-repeat padding-box;
+            border-radius: 5px;
+            opacity: 1;
+            border: none;
+            padding: 10px;
+            font-family: 'Open Sans'
+        }
+
+        input:focus {
+            outline: none
+        }
+
+        button {
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            font-size: 15px;
+            font: "Regular" 15px/20px "Open Sans";
+            letter-spacing: 0.07px;
+            color: #f4f5f7;
+            opacity: 1;
+            background: #4786ff 0% 0% no-repeat padding-box;
+            border-radius: 5px;
+            opacity: 1;
+            border: none;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        p {
+            width: 316px;
+            height: 44px;
+            text-align: left;
+            font: SemiBold 16px/22px "Open Sans";
+            letter-spacing: 0px;
+            opacity: 1;
+        }
+
+        .container .full-screen .speech p {
+            width: 300px;
+            font-size: 15px;
+            text-align: left;
+            font: Italic 13px "Open Sans";
+            letter-spacing: 0px;
+            color: #043b5c;
+            opacity: 1;
+        }
+
+        .triangle-right {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0px;
+            height: 0px;
+            border-left: 125px solid #eaf0fffa;
+            border-bottom: 45px solid transparent;
+        }
+
+        @media screen and (max-width: 800px) {
+            .speech {
+                display: none
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            .container .full-screen {
+                display: none
+            }
+
+            .container .full-screen-2 {
+                /* height: 100%; */
+                height: max-content;
+                width: max-content;
+                padding-bottom: 10px
+            }
+            body {
+                height: 100%;
+                margin: 0;
+                padding: 0
+            }
+        }
+    </style>
+    <div class="container">
+        <div class="full-screen">
+            <div class="speech">
+                <div class="quotes">
+                    <img src="images/quote.svg" alt="quotes" />
+                </div>
+                <div class="triangle-right"></div>
+                <p>
+                    We will help you accelerate your dream of becoming job ready in record time.
+                </p>
+
+            </div>
+        </div>
+        <div class="full-screen-2">
+            <form action="" name="signupform" id="signupform">
+                <div class="form">
+                    <img src="images/tiidelab_logo_new.svg" alt="tiidelab" />
+                    <h3>Apply Now</h3>
+                    <div class="input-container">
+                        <div class="detail">
+                            <h6>Full Name</h6>
+                            <input type="text" placeholder="Enter your full name" required id="fullname" />
+                        </div>
+                        <div class="detail">
+                            <h6>Email Address</h6>
+                            <input type="email" placeholder="Enter your email address" required id="email" />
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <div class="detail">
+                            <h6>Phone Number</h6>
+                            <input type="text" placeholder="0806000000" required id="phonenumber" />
+                        </div>
+                        <div class="detail">
+                            <h6>Username</h6>
+                            <input type="text" placeholder="Enter your username" required id="username" />
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <div class="detail">
+                            <h6>Password</h6>
+                            <input type="password" placeholder="password" required id="password" />
+                        </div>
+                        <div class="detail">
+                            <h6>Confirm Password</h6>
+                            <input type="password" placeholder="Repeat password" required id="cpassword" />
+                        </div>
+                    </div>
+
+                    <button class="button" type="submit" id="button">
+                        Sign Up
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const submitInfo = (e) => {
+            e.preventDefault();
+            const firstName = document
+                .getElementById("fullname")
+                .value.trim()
+                .split(" ")[0];
+            const lastName = document
+                .getElementById("fullname")
+                .value.trim()
+                .split(" ")[1];
+            const email = document.getElementById("email").value.trim();
+            const phoneNumber = document.getElementById("phonenumber").value.trim();
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const cPassword = document.getElementById("cpassword").value.trim();
+            console.log(firstName, lastName, email, phoneNumber, username, password, cPassword);
+
+            if (password != cPassword) {
+                alert('password mismatch')
+            }
+
+            fetchUrl(firstName, lastName, email, phoneNumber, username, password);
+        };
+
+        let button = document.getElementById("button");
+        button.addEventListener("click", submitInfo);
+
+        let url = "https://api.openclass.ng/Register";
+
+        const fetchUrl = (firstName, lastName, email, phoneNumber, username, password) => {
+            fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    firstName,
+                    lastName,
+                    email,
+                    phoneNumber,
+                    username,
+                    password,
+
+                }),
+            })
+                .then((res) => res.json())
+                .then((data) => console.log(data));
+        };
+    </script>
+</body>
+
+</html>
